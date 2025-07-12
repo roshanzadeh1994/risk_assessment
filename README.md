@@ -31,6 +31,7 @@ git clone https://github.com/roshanzadeh1994/risk_assessment.git
 ```bash
 cd risk_assessment
 ```
+
 #### 2. Virtuelle Umgebung erstellen
 ```bash
 python -m venv venv
@@ -62,6 +63,7 @@ http://localhost:8000
 ```bash
 http://localhost:8000/docs
 ```
+---
 
 ## 2️⃣ Ausführung mit Docker
 
@@ -89,6 +91,7 @@ docker run -p 8000:8000 risk-api
   ```bash
   http://localhost:8000/docs
   ```
+---
 
 ### 🧪 Tests ausführen
 Die Anwendung enthält mehrere modulare Tests (8 Dateien),
