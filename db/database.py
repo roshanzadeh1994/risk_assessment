@@ -11,3 +11,12 @@ engine = create_engine(
 
 # Session erstellen
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+
+# Dependency für Session-Erstellung
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()

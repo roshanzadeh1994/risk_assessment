@@ -1,11 +1,12 @@
 from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks
 from sqlalchemy.orm import Session
-from db.database import SessionLocal
 from db.models import Risk
 from schemas import RiskCreate, RiskResponse
 from typing import List
 import asyncio
 from db.models import Task
+from db.database import get_db
+
 
 router = APIRouter(prefix="/risks", tags=["Risks"])
 
@@ -27,13 +28,7 @@ async def run_risk_workflow(risk_id: int, db: Session):
 
 
 
-# Dependency für Session-Erstellung
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
+
         
 
 @router.post("/", response_model=RiskResponse)
