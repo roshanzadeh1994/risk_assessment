@@ -68,7 +68,12 @@ http://localhost:8000/docs
 ## 2️⃣ Ausführung mit Docker
 
 #### Schritte:
-
+```bash
+git clone https://github.com/roshanzadeh1994/risk_assessment.git
+```
+```bash
+cd risk_assessment
+```
 #### 1. Image bauen
 
 ```bash
