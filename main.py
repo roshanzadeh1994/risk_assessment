@@ -1,8 +1,12 @@
+"""
+main.py
+"""
+
 from fastapi import FastAPI
 from db.database import engine
 from db.models import Base
 from routers import homepage_router, risk_router, task_router
-from db.database import SessionLocal
+
 
 app = FastAPI(title="Risk Assessment API", version="1.0")
 
@@ -12,7 +16,5 @@ app.include_router(risk_router.router)
 app.include_router(task_router.router)
 
 
-        
 # Create database tables (only runs once at startup)
 Base.metadata.create_all(bind=engine)
-

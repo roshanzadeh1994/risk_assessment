@@ -3,6 +3,7 @@ from fastapi.responses import HTMLResponse
 
 router = APIRouter(tags=["Homepage"])
 
+
 # Simple homepage endpoint
 @router.get("/", response_class=HTMLResponse)
 def homepage():
@@ -13,4 +14,3 @@ def homepage():
     <p>📘 Über das <strong>Swagger UI</strong> können Sie das API-Design einsehen und testen:</p>
     <p>🔗 <a href='http://localhost:8000/docs'>http://localhost:8000/docs</a></p>
     """
-    
