@@ -99,7 +99,7 @@ docker run -p 8000:8000 risk-api
 ---
 
 ### 🧪 Tests ausführen
-Die Anwendung enthält mehrere modulare Tests (8 Dateien),
+Die Anwendung enthält mehrere modulare Tests (6 Dateien),
 die sich im Ordner /tests befinden und unterschiedliche Funktionalitäten prüfen –
 z. B. Risikoerstellung, Validierung, Statusänderung und Fehlerfälle.
 
